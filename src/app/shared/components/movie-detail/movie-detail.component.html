@@ -1,0 +1,36 @@
+<div class="container mt-6">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="poster">
+        <img
+          [src]="movie.poster_path ? 'https://image.tmdb.org/t/p/w500/' + movie.poster_path : 'https://via.placeholder.com/300x450'"
+          alt="{{movie.title}}" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="info">
+        <button class="btn btn-light mb-4" (click)="goBack.emit()">
+          <i class="bi bi-arrow-left"></i> Regresar
+        </button>
+        <h1>{{movie.title }}</h1>
+        <p class="subtitle text-muted">{{movie.original_title}}</p>
+        <div class="rating mb-3">
+          <span>{{movie.vote_average | number: '1.0-0'}}%</span>
+          <span>{{movie.runtime}} min</span>
+          <span>{{movie.release_date | date: 'yyyy'}}</span>
+        </div>
+        <p class="description">
+          {{movie.overview}}
+        </p>
+        <div class="share mt-3">
+          <a href="#" class="btn btn-primary btn-sm mr-2" title="Compartir en Facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="#" class="btn btn-info btn-sm" title="Compartir en Twitter">
+            <i class="bi bi-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

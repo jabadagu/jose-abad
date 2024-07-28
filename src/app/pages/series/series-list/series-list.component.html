@@ -1,0 +1,11 @@
+<app-navbar (search)="setValuetoSearch($event)"></app-navbar>
+<div style="margin-top: 75px;">
+    <app-movies-filter [genres]="movieGenres" (genreSelected)="onGenreSelected($event)"></app-movies-filter>
+</div>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let movie of tvCardsData" class="col-6 col-md-3 mt-4">
+            <app-movie-card [movie]="movie" (viewDetail)="viewSeriesDetail($event)"></app-movie-card>
+        </div>
+    </div>
+</div>

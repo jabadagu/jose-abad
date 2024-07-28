@@ -1,0 +1,41 @@
+.movie-header {
+  background-color: transparent;
+  padding-left: 3.125rem;
+  padding-right: 3.125rem;
+  background-color: #007bff;
+}
+
+.movie-header .navbar-brand img {
+  filter: brightness(0) invert(1);
+}
+
+.movie-filters .nav-link {
+  color: black !important;
+  padding: 0.5rem 1rem;
+}
+
+.movie-filters .nav-link.active {
+  border-bottom: 2px solid #007bff;
+}
+
+.movie-filters .nav-item.dropdown .dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.918);
+  border: none;
+}
+
+.movie-filters .nav-item.dropdown .dropdown-item {
+  color: white !important;
+}
+
+.movie-filters .nav-item.dropdown .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-item.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.dropdown-item {
+  cursor: pointer;
+}

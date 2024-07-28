@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="./../../../../assets/img/image.png" alt="Logo" >
+    </a>
+    
+    <div class="d-flex align-items-center ml-auto">
+      <div class="movie-search d-flex align-items-center">
+        <input 
+          type="text" 
+          [(ngModel)]="searchTerm" 
+          placeholder="Buscar" 
+          (ngModelChange)="searchMovie()"
+          class="form-control rounded-left-input search-input" />
+      </div>
+    </div>
+  </div>
+</nav>

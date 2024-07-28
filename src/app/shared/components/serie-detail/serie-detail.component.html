@@ -1,0 +1,38 @@
+<div class="container mt-6">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="poster">
+        <img
+          [src]="serie.poster_path ? 'https://image.tmdb.org/t/p/w500/' + serie.poster_path : 'https://via.placeholder.com/300x450'"
+          alt="{{serie.name}}" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="info">
+        <button class="btn btn-light mb-4" (click)="goBack.emit()">
+          <i class="bi bi-arrow-left"></i> Regresar
+        </button>
+        <h1>{{serie.name}}</h1>
+        <p class="subtitle text-muted">{{serie.original_name}}</p>
+        <div class="rating mb-3">
+          <span>{{serie.vote_average | number: '1.0-0'}}%</span>
+          <span>{{serie.episode_run_time && serie.episode_run_time.length > 0 ? serie.episode_run_time[0] + ' min' : 'N/A'}}</span>
+          <span>{{serie.first_air_date | date: 'yyyy'}}</span>
+        </div>
+        <p class="description">{{serie.overview}}</p>
+        <p class="genre"><strong>Género:</strong> {{serie.genres}}</p>
+        <p class="creators"><strong>Creadores:</strong> {{serie.created_by}}</p>
+        <p class="status"><strong>Estado:</strong> {{serie.status}}</p>
+        <p class="tagline"><strong>Tagline:</strong> {{serie.tagline}}</p>
+        <div class="share mt-3">
+          <a href="#" class="btn btn-primary btn-sm mr-2" title="Compartir en Facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="#" class="btn btn-info btn-sm" title="Compartir en Twitter">
+            <i class="bi bi-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

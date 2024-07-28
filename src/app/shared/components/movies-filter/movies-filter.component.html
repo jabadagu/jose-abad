@@ -1,0 +1,29 @@
+
+<div class="container">
+  <div class="movie-filters d-flex justify-content-start mt-2">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/" data-path="/">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/movies" data-path="/movies">Películas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/series" data-path="/series">Series</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="genresDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Géneros
+        </a>
+        <div class="dropdown-menu" aria-labelledby="genresDropdown">
+            <a class="dropdown-item" *ngFor="let genre of genres"
+              (click)="onTvGenreChange(genre.id)"
+              [class.active]="genre.id === selectedGenreId">
+              {{ genre.name }}
+            </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

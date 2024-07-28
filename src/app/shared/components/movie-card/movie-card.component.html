@@ -1,0 +1,8 @@
+<div class="card rounded card-cursor position-relative">
+  <img class="card-img-top" [src]="image_url + movie.poster_path" [alt]="movie.title">
+  <div class="overlay d-flex">
+    <button class="btn btn-primary" (click)="viewDetail.emit(movie)">
+      Ver
+    </button>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<app-navbar (search)="setValuetoSearch($event)"></app-navbar>
+<app-movie-carousel [data]="trendingMoviesAndTvShows" (goBack)="viewMovieDetail($event)"></app-movie-carousel>
+<app-movies-filter [genres]="movieGenres" (genreSelected)="onGenreSelected($event)"></app-movies-filter>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let movie of movieCardsData" class="col-6 col-md-3 mt-4">
+            <app-movie-card [movie]="movie" (viewDetail)="viewMovieDetail($event)"></app-movie-card>
+        </div>
+    </div>
+</div>

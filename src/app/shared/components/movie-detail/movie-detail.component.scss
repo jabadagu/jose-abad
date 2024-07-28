@@ -1,0 +1,27 @@
+.poster img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  .rating span {
+    background-color: #444444;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #FFFFFF;
+  }
+  .description {
+    line-height: 1.6;
+  }
+  .share a {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+  }
+  .btn-secondary {
+    margin-bottom: 15px;
+  }
+  .mt-6 {
+    margin-top: 95px;
+  }
