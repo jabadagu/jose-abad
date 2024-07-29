@@ -33,8 +33,7 @@
               "src/styles.scss"
             ],
             "scripts": [
-            ],
-            "baseHref": "/jose-abad/"
+            ]
           },
           "configurations": {
             "production": {
@@ -100,6 +99,9 @@
             "scripts": [
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
